@@ -1,0 +1,34 @@
+# Local settings for {{ project_name }} project.
+
+try:
+    from {{ project_name }}.settings_global import *
+except ImportError:
+    import sys
+    sys.stderr.write('{{ project_name }}.settings_global.py not available\n')
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+    # ('Admin Name', 'admin@{{ project_name }}.com'),
+)
+
+MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = '{{ secret_key }}'
+
+if DEBUG:
+    # Show emails in the console during development.
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
