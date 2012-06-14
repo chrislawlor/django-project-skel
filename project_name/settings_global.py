@@ -137,12 +137,3 @@ LOGGING = {
         },
     }
 }
-
-try:
-    LOCAL_SETTINGS
-except NameError:
-    try:
-        from {{ project_name }}.settings_local import *
-    except ImportError:
-        import sys
-        sys.stderr.write("{{ project_name }}.settings_local.py not available\n")
