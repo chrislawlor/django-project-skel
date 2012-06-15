@@ -15,6 +15,12 @@
 .settings
 atlassian-ide-plugin.xml
 
+# Virtualenv
+*-env/
+
+# Sqlite
+*.sqlite
+
 #######################################
 #####   From HTML5 Boilerplate   ######
 
@@ -59,5 +65,5 @@ publish
 .idea
 
 # build script local files
-build/buildinfo.properties
-build/config/buildinfo.properties
+web/build/buildinfo.properties
+web/build/config/buildinfo.properties

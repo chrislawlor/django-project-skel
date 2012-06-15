@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # url(r'^foo/', include('yougrups.foo.urls')),
+    # url(r'^myapp/', include('{{ project_name }}.myapp.urls')),
     
     # Home Page
     url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'),
