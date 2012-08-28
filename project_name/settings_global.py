@@ -1,17 +1,7 @@
 # Global settings for {{ project_name }} project.
 import os
-
-PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))
 PUBLIC_DIR = os.path.join(PROJECT_DIR, 'public')
-
-DEBUG = False
-TEMPLATE_DEBUG = True
-
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-)
-
-MANAGERS = ADMINS
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -40,7 +30,6 @@ USE_L10N = True
 USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join(PUBLIC_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -60,10 +49,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_DIR, 'static'),
+    os.path.join(PROJECT_DIR, 'web'),
 )
 
 # List of finder classes that know how to find static files in
@@ -96,7 +82,6 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
@@ -152,11 +137,3 @@ LOGGING = {
         },
     }
 }
-
-try:
-    LOCAL_SETTINGS
-except NameError:
-    try:
-        from local_settings import *
-    except ImportError:
-        pass
