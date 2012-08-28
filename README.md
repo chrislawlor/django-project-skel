@@ -25,7 +25,7 @@ This is a starting template for Django 1.4 projects using (a slightly modified v
 * Install Django 1.4
 * Run the following command specifying your project name.
 
-        django-admin.py startproject --template https://github.com/jacobrpg/django-h5bp-template/zipball/master --extension py,md,gitignore,dist yourprojectname
+        django-admin.py startproject --template https://github.com/chrislawlor/django-project-skel/zipball/master --extension py,md,gitignore,dist yourprojectname
 
 {% endif %}
 # {{ project_name|title }} Django Project #
