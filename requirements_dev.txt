@@ -1,0 +1,4 @@
+# Handy tools for development work
+django-debug-toolbar==0.9.4
+django-extensions==1.0.0
+Fabric==1.4.3

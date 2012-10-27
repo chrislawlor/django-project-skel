@@ -1,3 +1,2 @@
-django>=1.4
-django-debug-toolbar
+django==1.4
 south
