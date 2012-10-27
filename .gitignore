@@ -4,6 +4,7 @@
 
 # Project
 /{{ project_name }}/settings.py
+/project_name/settings.py
 /public/static
 /public/media
 
