@@ -137,3 +137,12 @@ LOGGING = {
         },
     }
 }
+
+# For using Bootstrap alerts with contrib.messages
+MESSAGE_TAGS = {
+    message_constants.DEBUG: 'alert-info',
+    message_constants.INFO: 'alert-info',
+    message_constants.SUCCESS: 'alert-success',
+    message_constants.WARNING: 'alert-error',
+    message_constants.ERROR: 'alert-error',
+}
